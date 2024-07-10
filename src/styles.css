@@ -1,0 +1,110 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.errors-snackbar {
+  .mat-mdc-snack-bar-container .mdc-snackbar__surface {
+    border-radius: 8px !important;
+    background-color: red;
+    color: whitesmoke !important;
+  }
+
+  .mat-mdc-button.mat-mdc-snack-bar-action {
+    color: whitesmoke !important;
+    background-color: rgb(255, 0, 0) !important;
+  }
+
+  .snackbar-success {
+    .mdc-snackbar__surface {
+      background-color: red !important;
+      color: whitesmoke !important;
+    }
+
+    .mdc-snackbar__label {
+      color: white !important;
+    }
+  }
+
+  .snackbar-error {
+    .mdc-snackbar__surface {
+      background-color: red !important;
+      color: whitesmoke !important;
+    }
+
+    .mdc-snackbar__label {
+      background-color: red !important;
+      color: whitesmoke !important;
+    }
+  }
+  .mat-mdc-simple-snack-bar{
+    background-color: red;
+    color: whitesmoke !important;
+  }
+}
+.sux-snackbar {
+  .mat-mdc-snack-bar-container .mdc-snackbar__surface {
+    border-radius: 8px !important;
+    background-color: green;
+    color: whitesmoke !important;
+  }
+
+  .mat-mdc-button.mat-mdc-snack-bar-action {
+    color: whitesmoke !important;
+    background-color: green !important;
+  }
+
+  .snackbar-success {
+    .mdc-snackbar__surface {
+      background-color: green !important;
+      color: whitesmoke !important;
+    }
+
+    .mdc-snackbar__label {
+      color: white !important;
+    }
+  }
+
+  .snackbar-error {
+    .mdc-snackbar__surface {
+      background-color: green !important;
+      color: whitesmoke !important;
+    }
+
+    .mdc-snackbar__label {
+      background-color: green !important;
+      color: whitesmoke !important;
+    }
+  }
+
+  .mat-mdc-simple-snack-bar {
+    background-color: green;
+    color: whitesmoke !important;
+  }
+}
+
+
+*{overflow: inherit!important;}
+ /* width */
+ ::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  border-radius: 10px;
+}

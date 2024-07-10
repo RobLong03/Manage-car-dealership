@@ -1,0 +1,40 @@
+<app-menuheader></app-menuheader>
+<form >
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title style="color: antiquewhite;">Telephones</mat-card-title>
+
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Enter value">
+      </mat-form-field>
+      <mat-icon style="color: antiquewhite;">person</mat-icon>
+      <br>
+      <mat-form-field>
+        <mat-label>Color </mat-label>
+        <input matInput placeholder="Enter value">
+
+      </mat-form-field>
+      <mat-icon style="color: antiquewhite;">color_lens</mat-icon>
+
+      <mat-form-field>
+        <mat-label>Storage </mat-label>
+        <input matInput placeholder="Enter value">
+
+      </mat-form-field>
+      <mat-icon style="color: antiquewhite;">storage</mat-icon>
+
+    </mat-card-content>
+    <mat-card-footer >
+      <button mat-raised-button style="background-color: antiquewhite; color: #000;"  >
+        Save
+      </button>
+      <button mat-raised-button style="background-color: rgb(254, 0, 0); color: #000;" (click)="backinback()"  >
+        Close
+      </button>
+    </mat-card-footer>
+  </mat-card>
+
+</form>

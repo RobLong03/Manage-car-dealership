@@ -1,0 +1,34 @@
+<app-menuheader></app-menuheader>
+
+<mat-card>
+  <mat-card-content>
+    <div class="container">
+      <mat-grid-list cols="3" rowHeight="350px" gutterSize="16px">
+        <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <mat-card class="tile" [ngStyle]="{'background': tile.color}">
+                  <mat-card-header>
+                    <mat-card-title>{{tile.text}}</mat-card-title>
+                  </mat-card-header>
+                  <mat-card-content>
+                    <img [src]="tile.image" loading="lazy" *ngIf="tile.image">
+                  </mat-card-content>
+                </mat-card>
+              </div>
+              <div class="flip-card-back">
+                <mat-card class="tile-back">
+                  <mat-card-content>
+                    <p>Details about {{tile.content}}</p>
+                  </mat-card-content>
+                </mat-card>
+              </div>
+            </div>
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </mat-card-content>
+</mat-card>
+

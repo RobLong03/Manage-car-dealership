@@ -1,0 +1,16 @@
+mat-card {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.iconactions{
+  height: 20.5px;
+   margin: 10px;
+  cursor: pointer;
+  }
+#searchText
+{
+  float: right;
+  cursor: pointer;
+}
+
+

@@ -1,0 +1,130 @@
+#reg {
+  cursor: pointer;
+}
+
+mat-card {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+form {
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  overflow: hidden!important;
+}
+
+.mat-mdc-form-field {
+  width: 50vw;
+  overflow: hidden;
+}
+
+mat-card {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  height: 80dvh;
+  margin-bottom: 20px;
+  overflow: hidden!important;
+}
+
+mat-card-title,
+mat-card-content {
+  margin-bottom: 10px;
+  margin-left: 24.75vw;
+  overflow: hidden!important;
+}
+
+mat-card-footer {
+   margin-bottom: 10px;
+  margin-left: 2.50vw;
+  flex-direction: column;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  overflow: hidden!important;
+}
+mat-card-footer>button{
+  text-decoration: none;
+  padding-inline: 2.25vw;
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  mat-card-footer {
+    height: 100%;
+    margin-bottom: 10px;
+    margin-left: 29.5vw;
+    position: absolute;
+  }
+
+  mat-card-title,
+  mat-card-content {
+    height: 100%;
+    margin-bottom: 10px;
+    margin-left: 20vw;
+    overflow: hidden;
+  }
+}
+
+.footer {
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 5vh;
+  text-align: center;
+  background-color: rgb(18, 27, 27);
+  animation: mymove 10s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  z-index: -1;
+  margin-top: -4.350vh;
+  overflow: hidden;
+}
+
+@keyframes mymove {
+  0% {
+    background-color: darkgray
+  }
+
+  25% {
+    background-color: rgb(18, 27, 27);
+  }
+
+  50% {
+    background-color: darkgray
+  }
+
+  75% {
+    background-color: darkgray
+  }
+}
+
+.fa{
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 100px;
+  background-blend-mode:exclusion ;
+  background-color: aliceblue;
+  text-align: justify;
+  font-weight: bold;
+  text-align: center;
+}
+.fa-instagram{
+  background: #f09433;
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+.fa-linkedin{
+  color: royalblue;
+}
+.fa:hover {
+  text-transform:lowercase;
+  text-transform:uppercase;
+
+}
+*{overflow: hidden!important;}

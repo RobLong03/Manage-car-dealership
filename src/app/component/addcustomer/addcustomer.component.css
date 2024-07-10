@@ -1,0 +1,22 @@
+form{
+  width: 100vw;
+}
+.mat-mdc-form-field{
+  width: 50vw;
+
+}
+mat-card {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  height: 100vh;
+
+}
+mat-card-title,mat-card-content{
+  margin-bottom: 10px;
+  margin-left: 25vw;
+}
+mat-card-footer
+{
+  margin-bottom: 10px;
+  margin-left: 45vw;
+}

@@ -1,0 +1,58 @@
+<form [formGroup]="myform" (ngSubmit)="onform()">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title style="color: antiquewhite;">Per entrare nel sito devi essere registrato</mat-card-title>
+
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>Nome user</mat-label>
+        <input required mat-error matInput placeholder="Enter value" formControlName="nameuser">
+        <mat-error *ngIf="myform.get('nameuser')?.value.length==0||myform.get('nameuser')?.value.length<=5">Is it required and it have a min of 5</mat-error>
+        <!-- <mat-hint style="color: antiquewhite;">This </mat-hint> -->
+      </mat-form-field>
+      <mat-icon style="color: antiquewhite;">person</mat-icon>
+      <br>
+      <mat-form-field>
+        <mat-label>Password </mat-label>
+        <input matInput required id="pass" type="password" placeholder="Enter value" formControlName="password">
+        <mat-error *ngIf="myform.get('password')?.value.length==0||myform.get('password')?.value.length<=5">Is it required and it have a min of 8</mat-error>
+      </mat-form-field>
+      <mat-icon id="reg" style="color: antiquewhite;"(click)="visibile()"  *ngIf="!isVisibile">visibility_off</mat-icon>
+      <mat-icon id="reg" style="color: antiquewhite;" (click)="visibile()"  *ngIf="isVisibile" >remove_red_eye</mat-icon>
+
+      <mat-form-field>
+        <mat-label>Authorization name</mat-label>
+        <input required matInput placeholder="Enter value" formControlName="authorization">
+        <mat-error *ngIf="myform.get('authorization')?.value.length==0||myform.get('authorization')?.value.length<=3">Is it required and it have a min of 4</mat-error>
+      </mat-form-field>
+      <mat-icon style="color: antiquewhite;">password</mat-icon>
+
+    </mat-card-content>
+    <mat-card-footer>
+      <button  mat-raised-button style="background-color: antiquewhite; color: #000;" type="submit" >
+        Submit
+      </button>
+
+      <!-- <small style="display: block; align-items: center;">Contatta l'amministratore se non sei registrato<br>clicca qui per contattarlo</small> -->
+    </mat-card-footer>
+
+  </mat-card>
+
+</form>
+<div class="footer" #footer>
+  <div>
+
+    <ul>
+      <li><a href="https://www.instagram.com/_r_0_b_y_n_?igsh=N3diMXpwMmdsN3I0" class="fa fa-instagram" target="_blank"
+          rel=""> Link to me</a></li>
+      <li><a href="https://www.linkedin.com/in/Bobbysolo" class="fa fa-linkedin" target="_blank" rel=""> Link to me</a></li>
+    </ul>
+  </div>
+</div>
+ <!-- <mat-form-field>
+        <mat-label>Nome user</mat-label>
+        <input required mat-error matInput placeholder="Enter value" formControlName="nameuser" (input)="onInput($event)">
+        <mat-error *ngIf="myform.get('nameuser')?.value.length==0">Is it required</mat-error>
+        <mat-hint align="end">{{value().length}}/5</mat-hint>
+       </mat-form-field> -->

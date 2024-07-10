@@ -1,0 +1,25 @@
+mat-form-field {
+  width: 80%;
+  display:inline-block;
+}
+form{
+  float: left;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ }
+ mat-icon{
+  transform: translate(18px, -29px);
+ }
+
+ button{
+  display:inline-block;
+ }
+ #reg{
+  cursor: pointer;
+ }
+
+ *{overflow: -moz-hidden-unscrollable!important;}

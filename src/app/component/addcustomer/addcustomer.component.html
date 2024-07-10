@@ -1,0 +1,52 @@
+<app-menuheader></app-menuheader>
+<form [formGroup]="myform" (ngSubmit)=" onform()">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title style="color: antiquewhite;">Costumer</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input required="true" formControlName="name" matInput placeholder="Enter value">
+      </mat-form-field>
+      <mat-icon style="color: antiquewhite;">person</mat-icon>
+      <br>
+      <mat-form-field>
+        <mat-label>Surname</mat-label>
+        <input required="true"  formControlName="surname" matInput placeholder="Enter value">
+      </mat-form-field>
+      <mat-icon style="color: antiquewhite;">person_pin</mat-icon>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input type="email" required="true" formControlName="email" matInput placeholder="Enter value">
+      </mat-form-field>
+      <mat-icon style="color: antiquewhite;">email</mat-icon>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input type="password" required="true" id="pass" formControlName="password" matInput placeholder="Enter value">
+      </mat-form-field>
+      <mat-icon id="reg" style="color: antiquewhite;"(click)="visibile()"  *ngIf="!isVisibile">visibility_off</mat-icon>
+      <mat-icon id="reg" style="color: antiquewhite;" (click)="visibile()"  *ngIf="isVisibile" >remove_red_eye</mat-icon>
+
+      <mat-form-field>
+        <mat-label>VAT</mat-label>
+        <input type="text" formControlName="vat" matInput placeholder="Enter value">
+      </mat-form-field>
+      <mat-icon style="color: antiquewhite;">payment</mat-icon>
+      <mat-form-field>
+        <mat-label>City</mat-label>
+        <input type="text" formControlName="città" matInput placeholder="Enter value">
+      </mat-form-field>
+      <mat-icon style="color: antiquewhite;">location_city</mat-icon>
+    </mat-card-content>
+    <mat-card-footer>
+      <button mat-raised-button style="background-color: antiquewhite; color: #000;">
+        Save
+      </button>
+      <button mat-raised-button style="background-color: rgb(254, 0, 0); color: #000;" (click)="backinback()">
+        Close
+      </button>
+    </mat-card-footer>
+  </mat-card>
+
+</form>

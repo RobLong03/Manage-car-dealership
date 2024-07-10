@@ -1,0 +1,15 @@
+mat-toolbar{
+  display: grid;
+  grid-template-columns: auto auto 2fr auto;
+  align-items: center;
+}
+.buttonexit{
+  justify-self: end;
+}
+.button{
+  justify-self: start;
+}
+.buttons{
+  justify-self: start;
+}
+*{overflow: hidden!important;}

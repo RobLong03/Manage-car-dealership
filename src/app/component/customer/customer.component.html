@@ -1,0 +1,82 @@
+<app-menuheader></app-menuheader>
+<mat-toolbar>
+  <mat-form-field style="width: 30% ;height: 100%;" >
+
+    <input
+          (keyup)="applyFilter($event)"
+          (keypress)="applyFilter($event)"
+          (keyup)="applyFilter($event)"
+          type="search"
+          [(ngModel)]="searchText"
+          matInput
+          appearance="outline"
+          placeholder="Search"
+          autocomplete="off" >
+          <mat-icon matSuffix id="searchText" (click)="applyFilter($event)">search</mat-icon>
+  </mat-form-field>
+
+
+
+<!-- [(ngModel)]="searchText" -->
+</mat-toolbar>
+
+<mat-card>
+
+
+  <mat-card-header>
+    <mat-card-title style="color: antiquewhite;" routerLink="/addcustomer">Costumers<button
+        mat-button><mat-icon>add</mat-icon></button></mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <table mat-table matSort [dataSource]="dataSource">
+
+      <ng-container matColumnDef="Azioni">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef> Azioni </th>
+        <td mat-cell [attr.data-label]="element.id" *matCellDef="let element">
+          <mat-icon class="iconactions" [attr.data-label]="element.id" (click)=" eliminate(element.id)">close</mat-icon>
+          <mat-icon class="iconactions" [attr.data-label]="element.id" (click)="edit(element.id)" >edit</mat-icon>
+        </td>
+      </ng-container>
+      <!--  -->
+      <ng-container matColumnDef="ID">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let element">{{element.id}}</td>
+      </ng-container>
+      <ng-container matColumnDef="Nome">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Cognome">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef> Surname </th>
+        <td mat-cell *matCellDef="let element">{{element.cognome}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Email">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef> Email </th>
+        <td mat-cell *matCellDef="let element">{{element.email}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Password">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef> Password </th>
+        <td mat-cell *matCellDef="let element">{{element.password}} </td>
+      </ng-container>Partita IVA
+      <ng-container matColumnDef="Partita IVA">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef> VAT number </th>
+        <td mat-cell *matCellDef="let element">{{element.partitaiva}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Città">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef> City </th>
+        <td mat-cell *matCellDef="let element">{{element.citta}} </td>
+      </ng-container>
+      <!-- <ng-container matColumnDef="STORAGE">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef> Capacity </th>
+        <td mat-cell *matCellDef="let element">{{element.data?.capacity}} </td>
+      </ng-container> -->
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </mat-card-content>
+  <mat-paginator [pageSize]="15" [pageSizeOptions]="[3,6,10,15]" showFirstLastButtons>
+
+  </mat-paginator>
+</mat-card>

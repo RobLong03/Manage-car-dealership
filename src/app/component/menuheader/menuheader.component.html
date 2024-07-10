@@ -1,0 +1,21 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+  </mat-drawer>
+
+  <mat-toolbar role="heading">
+    <div class="example-sidenav-content">
+      <button mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+    <button routerLink="/Main" class="buttons" mat-button><mat-icon>home</mat-icon>Home</button>
+    <button routerLink="/Customer"class="buttons" mat-button><mat-icon>supervisor_account</mat-icon>Customers</button>
+
+    <button class="buttonexit" mat-button (click)="logout()">
+      <mat-icon>exit_to_app</mat-icon>
+    </button>
+  </mat-toolbar>
+
+
+</mat-drawer-container>
+

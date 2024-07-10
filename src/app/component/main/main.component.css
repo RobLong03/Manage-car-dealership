@@ -1,0 +1,105 @@
+*{overflow: hidden!important;}
+mat-card-header{
+  background: #12121212;
+  padding: 10px;
+  color:white;
+  overflow: hidden!important;
+}
+
+mat-card-content{
+  padding: 10px;
+  overflow: hidden!important;
+
+}
+
+mat-card{
+  padding:0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  overflow: hidden!important;
+}
+.container {
+  padding: 16px;
+  overflow: hidden!important;
+}
+
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  overflow: hidden!important;
+}
+img
+{
+  image-rendering: optimizeSpeed;
+  height: 40vh;
+  width: 60vw;
+  overflow: hidden!important;
+  object-fit: contain;
+  mask-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/car.svg);
+  mask-size: 68.5vmin;
+  mask-repeat: no-repeat;
+  mask-position:center;
+  mask-border-mode: alpha;
+
+}
+.tile:hover {
+
+  cursor: pointer;
+
+}
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  border: none;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.mat-grid-tile .mat-figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
