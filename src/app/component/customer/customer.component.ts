@@ -11,6 +11,7 @@ import { MenuheaderComponent } from '../menuheader/menuheader.component';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MatInputPromptComponent } from '../../../prompts/mat-input-prompt/mat-input-prompt.component';
+import * as XLSX from "xlsx";
 @Component({
   selector: 'app-customer',
   standalone: true,
@@ -20,6 +21,9 @@ import { MatInputPromptComponent } from '../../../prompts/mat-input-prompt/mat-i
   styleUrls: ['./customer.component.css']
 })
 export class CustomerComponent implements OnInit {
+downloadFile(arg0: MatTableDataSource<Costumer,MatPaginator>) {
+throw new Error('Method not implemented.');
+}
   postdata!: Costumer[];
 
   displayedColumns: string[] = ["Azioni","ID", "Nome", "Cognome","Email","Password","Partita IVA","Città"];
@@ -46,7 +50,6 @@ export class CustomerComponent implements OnInit {
     this.Apiservice.getallcostumers().subscribe(x => {
       this.postdata = x;
       this.dataSource = new MatTableDataSource<Costumer>(this.postdata);
-
       this.dataSource.paginator = this.paginator;
 
 
@@ -81,7 +84,24 @@ export class CustomerComponent implements OnInit {
 
 
   }
+  exportTable(tableId: string, name?: string) {
+    let timeSpan = new Date().toISOString();
+    let prefix = name || "ExportResult";
+    let fileName = `${prefix}-${timeSpan}`;
+    let targetTableElm = document.getElementById(tableId);
+    if (!(targetTableElm instanceof HTMLTableElement)) {
+      console.error(`Element with id ${tableId} is not a table.`);
+      return;
+    }
+    let clonedTable = targetTableElm.cloneNode(true) as HTMLTableElement;
+    for (let row of Array.from(clonedTable.rows)) {
+      row.deleteCell(0);
+    }
+    let wb = XLSX.utils.table_to_book(clonedTable, <XLSX.Table2SheetOpts>{ sheet: prefix });
+    XLSX.writeFile(wb, `${fileName}.xlsx`);
+  }
 }
+
 
 // dialogRef.afterClosed().subscribe((data) => {
     //   this.dataFromDialog = data.form;

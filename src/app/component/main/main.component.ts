@@ -15,12 +15,12 @@ import {MatGridListModule} from '@angular/material/grid-list';
 export class MainComponent {
 // https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/car.svg
   tiles = [
-    {text: 'Cars', cols: 1, rows: 1, color: 'trasparent',image:"https://images.pexels.com/photos/164634/pexels-photo-164634.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",id:"cars",content:"ok"},
-    {text: 'Customers', cols: 1, rows: 1, color: '#00000',image:""},
-    {text: 'Tile 3', cols: 1, rows: 1, color: '#9C27B0',image:""},
-    {text: 'Tile 4', cols: 1, rows: 1, color: '#673AB7',image:""},
-    {text: 'Tile 5', cols: 1, rows: 1, color: '#3F51B5',image:""},
-    {text: 'Tile 6', cols: 1, rows: 1, color: '#2196F3',image:""},
+    {text: 'Cars', cols: 1, rows: 1, color: 'trasparent',image:"https://images.pexels.com/photos/164634/pexels-photo-164634.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",id:"cars"},
+    {text: 'Customers', cols: 1, rows: 1, color: 'trasparent',image:"https://media.licdn.com/dms/image/C5612AQFpNUcwmy8DUg/article-cover_image-shrink_720_1280/0/1520077092556?e=1726099200&v=beta&t=xCOyFM_PVUrDbcKWjA2iWOvYlmNMeNLv40oV0bUlHG8"},
+    {text: 'Sales and Retails', cols: 1, rows: 1, color: 'trasparent',image:"https://www.venditoreprofessionista.it/wp-content/uploads/2017/12/arrows-2899885_1920.jpg"},
+    {text: 'Balance', cols: 1, rows: 1, color: 'trasparent',image:"https://blog.crescitalia.com/hubfs/equilibrio%20economico%20finanziario%20pmi.jpg"},
+    {text: 'Services', cols: 1, rows: 1, color: 'trasparent',image:"https://stl.tech/wp-content/uploads/2023/02/Network-services-scaled.webp"},
+    {text: 'Infos', cols: 1, rows: 1, color: 'trasparent',image:"https://leclaireur.fnac.com/wp-content/uploads/2022/03/shutterstock-2087797885-e1647955096585-1256x826.jpg"},
   ];
 
 }

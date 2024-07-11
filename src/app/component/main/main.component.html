@@ -13,14 +13,13 @@
                     <mat-card-title>{{tile.text}}</mat-card-title>
                   </mat-card-header>
                   <mat-card-content>
-                    <img [src]="tile.image" loading="lazy" *ngIf="tile.image">
+                    <img [id]="tile.id" [src]="tile.image" loading="lazy" *ngIf="tile.image">
                   </mat-card-content>
                 </mat-card>
               </div>
               <div class="flip-card-back">
                 <mat-card class="tile-back">
                   <mat-card-content>
-                    <p>Details about {{tile.content}}</p>
                   </mat-card-content>
                 </mat-card>
               </div>

@@ -1,6 +1,6 @@
 <app-menuheader></app-menuheader>
 <mat-toolbar>
-  <mat-form-field style="width: 30% ;height: 100%;" >
+  <mat-form-field style="width: 25% ;height: 100%;" >
 
     <input
           (keyup)="applyFilter($event)"
@@ -24,15 +24,18 @@
 
 
   <mat-card-header>
-    <mat-card-title style="color: antiquewhite;" routerLink="/addcustomer">Costumers<button
+    <mat-card-title class="title" routerLink="/addcustomer">Costumers<button
         mat-button><mat-icon>add</mat-icon></button></mat-card-title>
-  </mat-card-header>
 
+    <mat-card-title class="title">Dowload the data<button mat-button
+        type="button" (click)="exportTable('Customers','Customer')"><mat-icon>download</mat-icon></button></mat-card-title>
+
+  </mat-card-header>
   <mat-card-content>
-    <table mat-table matSort [dataSource]="dataSource">
+    <table mat-table id="Customers" matSort [dataSource]="dataSource">
 
       <ng-container matColumnDef="Azioni">
-        <th mat-header-cell mat-sort-header *matHeaderCellDef> Azioni </th>
+        <th mat-header-cell mat-sort-header *matHeaderCellDef>Azioni</th>
         <td mat-cell [attr.data-label]="element.id" *matCellDef="let element">
           <mat-icon class="iconactions" [attr.data-label]="element.id" (click)=" eliminate(element.id)">close</mat-icon>
           <mat-icon class="iconactions" [attr.data-label]="element.id" (click)="edit(element.id)" >edit</mat-icon>

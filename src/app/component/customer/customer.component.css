@@ -1,6 +1,9 @@
 mat-card {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  display: grid;
+  grid-template-columns: auto auto 2fr auto;
+  align-items: center;
 }
 .iconactions{
   height: 20.5px;
@@ -12,5 +15,11 @@ mat-card {
   float: right;
   cursor: pointer;
 }
+.buttoncsv{
+  justify-self: end;
+  float: left;
 
-
+}
+.title{
+ color: aliceblue;
+}

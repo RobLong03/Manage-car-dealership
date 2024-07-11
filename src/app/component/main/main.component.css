@@ -33,6 +33,7 @@ mat-card{
   font-size: 20px;
   text-align: center;
   overflow: hidden!important;
+  border: none;
 }
 img
 {
@@ -40,28 +41,33 @@ img
   height: 40vh;
   width: 60vw;
   overflow: hidden!important;
+  object-fit: cover;
+  mask-size: 68.5vmin;
+}
+/* img:nth-child(0)
+{
+  image-rendering: optimizeSpeed;
+  height: 40vh;
+  width: 60vw;
+  overflow: hidden!important;
   object-fit: contain;
-  mask-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/car.svg);
+  mask-image: url(https://banner2.cleanpng.com/20180420/cye/kisspng-computer-icons-icon-design-customer-user-exposure-5ad9966a701115.6334544615242092584591.jpg);
   mask-size: 68.5vmin;
   mask-repeat: no-repeat;
   mask-position:center;
   mask-border-mode: alpha;
 
-}
+} */
 .tile:hover {
-
   cursor: pointer;
-
 }
 .flip-card {
   background-color: transparent;
   width: 100%;
   height: 100%;
   border: none;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  perspective: 1000px;
 }
-
-/* This container is needed to position the front and back side */
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -70,28 +76,23 @@ img
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
-/* Position the front and back side */
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
-/* Style the front side (fallback if image is missing) */
 .flip-card-front {
   background-color: #bbb;
   color: black;
 }
 
-/* Style the back side */
 .flip-card-back {
   background-color: dodgerblue;
   color: white;
