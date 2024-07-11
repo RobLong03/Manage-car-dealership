@@ -1,5 +1,15 @@
-# App
 
+Manage-car-dealership
+
+This project is trying to create a management system similar to that of a car dealership. Note that in the server I used Supabase as the database and it should be considered that I used several Angular tools, node.js is present in the "Server node" path. I hope you find something useful
+
+1)LOOK to start the project you need to run Angular and node :1)ng serve,2)cd "Server node",node index.js
+
+2)these are the credentials to access in the first page , the login require: Philiphps as nameuser,passwordgameronly12@à as password,User as authorization.
+
+PS... I know I can make mistakes on the language.Something may be in Italian because the project changed unexpectedly and then I decided to make it more accessible to the world.
+
+# App
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.2.
 
 ## Development server
