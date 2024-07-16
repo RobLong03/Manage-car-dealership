@@ -32,13 +32,15 @@ export class HomeComponent implements OnInit {
     private toastService: ToastService,
     private sanit:DomSanitizer
 
-  ) { }
-  ngOnInit() {
+  ) {
     this.myform = new FormGroup({
-      nameuser: new FormControl('',[Validators.minLength(5),Validators.required]),
-      password: new FormControl('',[Validators.minLength(8),Validators.required]),
-      authorization: new FormControl('',[Validators.minLength(4),Validators.required]),
-    });
+    nameuser: new FormControl('',[Validators.minLength(5),Validators.required]),
+    password: new FormControl('',[Validators.minLength(8),Validators.required]),
+    authorization: new FormControl('',[Validators.minLength(4),Validators.required]),
+  });
+}
+  ngOnInit(): void {
+    this.service.logout();
   }
   // protected onInput(event: Event) {
   //   this.value.set((event.target as HTMLInputElement).value);

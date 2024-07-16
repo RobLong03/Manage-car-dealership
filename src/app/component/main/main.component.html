@@ -8,12 +8,12 @@
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <mat-card class="tile" [ngStyle]="{'background': tile.color}">
+                <mat-card class="tile" [routerLink]="tile.router" [ngStyle]="{'background': tile.color}">
                   <mat-card-header>
                     <mat-card-title>{{tile.text}}</mat-card-title>
                   </mat-card-header>
                   <mat-card-content>
-                    <img [id]="tile.id" [src]="tile.image" loading="lazy" *ngIf="tile.image">
+                    <img  [src]="tile.image" loading="lazy" *ngIf="tile.image">
                   </mat-card-content>
                 </mat-card>
               </div>

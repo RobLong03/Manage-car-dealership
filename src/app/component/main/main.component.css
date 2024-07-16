@@ -1,7 +1,6 @@
 *{overflow: hidden!important;}
 mat-card-header{
   background: #12121212;
-  padding: 10px;
   color:white;
   overflow: hidden!important;
 }
@@ -21,7 +20,6 @@ mat-card{
   overflow: hidden!important;
 }
 .container {
-  padding: 16px;
   overflow: hidden!important;
 }
 
@@ -38,8 +36,8 @@ mat-card{
 img
 {
   image-rendering: optimizeSpeed;
-  height: 40vh;
-  width: 60vw;
+  height: 40dvh;
+  width: 60dvw;
   overflow: hidden!important;
   object-fit: cover;
   mask-size: 68.5vmin;

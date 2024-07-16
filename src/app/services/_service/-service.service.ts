@@ -76,7 +76,7 @@ export class ServiceService {
   }
   logout(): void {
 
-    localStorage.removeItem('authUser');
+    localStorage.removeItem('auth');
     this.isAuthenticated = false;
   }
 
