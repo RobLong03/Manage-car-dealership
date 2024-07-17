@@ -19,7 +19,7 @@ form {
 }
 
 .mat-mdc-form-field {
-  width: 50vw;
+  width: 50dvw;
   overflow: hidden;
 }
 
@@ -34,13 +34,13 @@ mat-card {
 mat-card-title,
 mat-card-content {
   margin-bottom: 10px;
-  margin-left: 24.75vw;
+  margin-left: 24.75dvw;
   overflow: hidden!important;
 }
 
 mat-card-footer {
    margin-bottom: 10px;
-  margin-left: 2.50vw;
+  margin-left: 2.50dvw;
   flex-direction: column;
   align-items: center;
   flex-direction: column;
@@ -54,28 +54,13 @@ mat-card-footer>button{
   padding-inline: 2.25vw;
   text-align: center;
 }
-@media only screen and (max-width: 600px) {
-  mat-card-footer {
-    height: 100%;
-    margin-bottom: 10px;
-    margin-left: 29.5vw;
-    position: absolute;
-  }
 
-  mat-card-title,
-  mat-card-content {
-    height: 100%;
-    margin-bottom: 10px;
-    margin-left: 20vw;
-    overflow: hidden;
-  }
-}
 
 .footer {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 5vh;
+  padding: 5dvh;
   text-align: center;
   background-color: rgb(18, 27, 27);
   animation: mymove 10s cubic-bezier(0.95, 0.05, 0.795, 0.035);
