@@ -22,6 +22,7 @@
     "@angular/router": "^18.0.0",
     "@ngrx/store": "^18.0.0",
     "@types/file-saver": "^2.0.7",
+    "bootstrap": "^5.3.3",
     "file-saver": "^2.0.5",
     "json-server": "^1.0.0-beta.1",
     "ngx-toastr": "^19.0.0",
