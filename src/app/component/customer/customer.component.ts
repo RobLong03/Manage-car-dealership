@@ -10,8 +10,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { MenuheaderComponent } from '../menuheader/menuheader.component';
 import {MatDialog, MatDialogModule} from '@angular/material/dialog';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { MatInputPromptComponent } from '../../../prompts/mat-input-prompt/mat-input-prompt.component';
 import * as XLSX from "xlsx";
+import { MatInputPromptComponent } from '../../../prompts/mat-input-prompt/mat-input-prompt.component';
 @Component({
   selector: 'app-customer',
   standalone: true,
@@ -26,7 +26,7 @@ throw new Error('Method not implemented.');
 }
   postdata!: Costumer[];
 
-  displayedColumns: string[] = ["Azioni","ID", "Nome", "Cognome","Email","Password","Partita IVA","Città"];
+  displayedColumns: string[] = ["Actions","ID", "Name", "Surname","Email","Password","Partita IVA","Città"];
   public dataSource!: MatTableDataSource<Costumer>;
   myform!: FormGroup;
   @ViewChild(MatPaginator)paginator!:MatPaginator;

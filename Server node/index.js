@@ -289,6 +289,26 @@ app.put('/modify/customer', async (req, res) => {
   }
 });
 
+
+app.get("/cars",async(req,res)=>{
+
+  try {
+
+    const {data,error}=await supabase
+    .from("Cars")
+    .select("*")
+
+    if (error) {
+      throw error;
+    }
+
+    res.status(200).json(data);
+  } catch (error) {
+    console.error('Error fetching cars:', error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+})
+
 // app.put('/modify/customer',async (req,res)=>{
 //   const {id,name,surname,email,password,vat,city}=req.body;
 //   try {

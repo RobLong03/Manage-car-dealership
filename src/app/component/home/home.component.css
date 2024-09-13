@@ -14,7 +14,6 @@ form {
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
-  overflow: hidden;
   overflow: hidden!important;
 }
 
@@ -67,6 +66,7 @@ mat-card-footer>button{
   z-index: -1;
   margin-top: -4.350vh;
   overflow: hidden;
+  
 }
 
 @keyframes mymove {
@@ -112,4 +112,4 @@ mat-card-footer>button{
   text-transform:uppercase;
 
 }
-*{overflow: hidden!important;}
+*:root{overflow: hidden!important;}

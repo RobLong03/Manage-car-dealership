@@ -109,3 +109,14 @@ header {
 }
 
 
+.car-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+.car-card img {
+  width: 100%;
+  height: auto;
+}

@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 import { Telephone } from '../../../_model/Telephone';
 import { UserAdmin } from '../../../_model/UserAdmin';
 import { catchError, map, Observable, of, tap, timestamp } from 'rxjs';
+import { Car } from '../../../_model/Car';
 
 @Injectable({
   providedIn: 'root'
@@ -41,6 +42,9 @@ export class ServiceService {
   }
   getAllCostumer() {
     return this.http.get<Telephone[]>('https://api.restful-api.dev/objects')
+  }
+  getAllCars() {
+    return this.http.get<Car[]>('http://localhost:7143/cars',this.httpOptions)
   }
   authenticate(nameuser: string, password: string, authorization: string): Observable<boolean> {
     const url = `http://localhost:7143/auth/${encodeURIComponent(nameuser)}/${encodeURIComponent(password)}/${encodeURIComponent(authorization)}`;

@@ -1,39 +1,101 @@
 <app-menuheader></app-menuheader>
 <header>
   <img src="https://hips.hearstapps.com/hmg-prod/images/bmw-vision-neue-klasse-concept28-64e39f53b0cc3.jpg"
-  alt="bmw-vision-neue-klasse-concept28" aria-labelby="bmw-vision-neue-klasse-concept28" srcset="">
+    alt="bmw-vision-neue-klasse-concept28" aria-labelby="bmw-vision-neue-klasse-concept28" srcset="">
 </header>
 <section class="search-container">
   <div class="search-box">
-      <div class="search-options">
-          <select name="make" id="make">
-              <option value="">All makes</option>
-              <!-- Add more options here -->
-          </select>
-          <select name="model" id="model">
-              <option value="">All models</option>
-              <!-- Add more options here -->
-          </select>
-          <select name="body-type" id="body-type">
-              <option value="">All body types</option>
-              <!-- Add more options here -->
-          </select>
-          <input type="text" name="keyword" placeholder="Search by keyword">
-          <button type="submit">Show 251,932 cars</button>
-      </div>
+    <div class="search-options">
+      <select name="make" id="make">
+        <option value="">All makes</option>
+
+      </select>
+      <select name="model" id="model">
+        <option value="">All models</option>
+
+      </select>
+      <select name="body-type" id="body-type">
+        <option value="">All body types</option>
+
+      </select>
+      <input type="text" name="keyword" placeholder="Search by keyword">
+      <button type="submit">Show 251,932 cars</button>
+    </div>
   </div>
 
   <div class="lifestyle-search">
-      <h2>Search by lifestyle</h2>
-      <div class="lifestyle-options">
-          <div class="lifestyle-option">Family</div>
-          <div class="lifestyle-option">First car</div>
-          <div class="lifestyle-option">Green</div>
-          <div class="lifestyle-option">Offroad 4x4</div>
-          <div class="lifestyle-option">Performance</div>
-          <div class="lifestyle-option">Prestige</div>
-          <div class="lifestyle-option">Tradie</div>
-          <div class="lifestyle-option">Unique</div>
-      </div>
+    <h2>Search by lifestyle</h2>
+    <div class="lifestyle-options">
+      <div class="lifestyle-option">Family</div>
+      <div class="lifestyle-option">First car</div>
+      <div class="lifestyle-option">Green</div>
+      <div class="lifestyle-option">Offroad 4x4</div>
+      <div class="lifestyle-option">Performance</div>
+      <div class="lifestyle-option">Prestige</div>
+      <div class="lifestyle-option">Tradie</div>
+      <div class="lifestyle-option">Unique</div>
+    </div>
   </div>
+  <section class="car-card">
+
+
+
+    @for (item of data; track item.CarName)
+    {
+
+    @if($index<=30){ <!DOCTYPE html>
+      <div class="car-card">
+        <div class="container">
+          <div class="header">
+            <h1 style="text-transform: uppercase;">{{ item.CarName }} <span class="model">{{ item.aspiration }}</span>
+            </h1>
+            <!-- <p>Sistema di navigazione, Alzacristalli elettrici, Cerchi in lega, USB, Cruise Control, Airbag testa, S...</p> -->
+          </div>
+
+          <div class="content">
+
+            <div class="price-section">
+              <div class="price">
+                <span class="amount">Price: {{ item.price }}-</span>
+                <span class="nd">ND</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="details">
+            <div class="detail-item">
+              <img src="kilometer-icon.png" alt="Cylindernumber">
+              <span >: {{  item.cylindernumber |stringpipe}}</span>
+            </div>
+            <div class="detail-item">
+              <img src="manual-icon.png" alt="Fuelsystem">
+              <span>: {{item.fuelsystem}}</span>
+            </div>
+            <div class="detail-item">
+              <img src="calendar-icon.png" alt="Horsepower">
+              <span>: {{item.horsepower}}</span>
+            </div>
+            <div class="detail-item">
+              <img src="fuel-icon.png" alt="Fuel">
+              <span>: {{item.fueltype}}</span>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+
+      <!-- <h3 style="text-transform: uppercase;">{{ item.CarName }}</h3>
+          <p>Horsepower:{{ item.horsepower }}</p> -->
+
+      }
+
+      }
+      @empty
+      {
+      <li>There are no items.</li>
+      }
+  </section>
+
 </section>
