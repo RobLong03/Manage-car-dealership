@@ -24,7 +24,7 @@
       <mat-form-field>
         <mat-label>Authorization name</mat-label>
         <input required matInput placeholder="Enter value" formControlName="authorization">
-        <mat-error *ngIf="myform.get('authorization')?.value.length==0||myform.get('authorization')?.value.length<=3">Is it required and it have a min of 4</mat-error>
+        <mat-error *ngIf="myform.get('authorization')?.value.length==0||myform.get('authorization')?.value.length<=3">It is required and it have a min of 4</mat-error>
       </mat-form-field>
       <mat-icon style="color: antiquewhite;">password</mat-icon>
 
