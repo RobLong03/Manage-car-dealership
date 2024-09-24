@@ -66,7 +66,7 @@ export class HomeComponent implements OnInit {
         authorization: this.sanit.sanitize(SecurityContext.NONE, this.myform.get('authorization')?.value) || '',
       };
 
-      this.service.authenticate(obj.nameuser, obj.password, obj.authorization).subscribe((data: any) => {
+      this.service.authenticate(obj.nameuser.trim(), obj.password.trim(), obj.authorization.trim()).subscribe((data: any) => {
         if (data && this.service.isAuthenticatedUser()) {
           this.toastService.show("Log-in")
           setTimeout(() => {
